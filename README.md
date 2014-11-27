@@ -4,7 +4,7 @@ jquery.drag.js
 Dragging elements easily with jQuery but without jQueryUI
 
 
-Mainy based on the scripts and comments found there : http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
+Mainly based on the scripts and comments found there : http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
 
 I just added : 
 - small corrections
