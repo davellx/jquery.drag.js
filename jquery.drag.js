@@ -4,7 +4,8 @@
         options = $.extend({
             handle: null,
             cursor: 'move',
-            onMoved:function(){}
+            onMoved:function(){},
+			onDrop: function(){}
         }, options);
 
         var $handle = this,
@@ -30,7 +31,6 @@
                 $(document.documentElement)
                     .on('touchmove.drag mousemove.drag', function(e) {
                         var pos = e;
-                        console.log('test');
                         if(e.type === "touchmove"){
                             pos = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
                         } 					
@@ -47,6 +47,10 @@
 
                 // disable selection
                 e.preventDefault();
-            });
+            })
+			.on('touchend mouseup', function() {
+				$handle.off('touchmove mousemove');
+				options.onDrop();
+			});
     };
 })(jQuery);
