@@ -22,5 +22,8 @@ $('div').drags({
     handle: ".myHandle",
     onMoved: function(){
       //do something cool
+    },
+	onDrop: function(){
+      //do something cool
     }
   });
